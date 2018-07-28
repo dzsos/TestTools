@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"> 
-    <title>Git</title>
+    <title>TestTools</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top garden-nav">
@@ -18,7 +18,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Git</a>
+                    <a class="nav-link" href="index.html">Főoldal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="git.html">Git</a>
                 </li>
             </ul>
         </div>
@@ -27,170 +30,107 @@
     <main>
         <section class="container rounded">
             <div class="row pt-2 yellow-line-bg">
-                <div class="col-12 text-left">
-                    <h4>Git alap parancsok</h4>
+                <div class="col-12 text-left py-2">
+                    <h4>CRUD model</h4>
                     <div class="dropdown-divider"></div>
-                    <h6>git --version</h6>
+                    <p><small>2018.07.28.</small></p>
                     <p class="blog-text">
-                        Megmutatja a git adott verzióját.
-                    </p>
-                    <h6>git config --global user.name "dzsos"</h6>
-                    <h6>git config --global user.email "dzsos@garden.hu"</h6>
-                    <p class="blog-text">
-                        Néhány konfig beállítás megadása.
-                    </p>
-                    <h6>git config --list</h6>
-                    <p class="blog-text">
-                        Kijelzi a jelenlegi beállításokat, változókat.
-                    </p>
-                    <h6>git help</h6>
-                    <h6>git help commit</h6>
-                    <p class="blog-text">
-                        A git helpere, ha konkrét parancsot is megadunk, akkor egy böngészőben megnyitja az adott parancshoz tartozó segítséget.
-                    </p>
-                    <h6>clear</h6>
-                    <p class="blog-text">
-                        Parancssorban törli a képernyőt.
-                    </p>
-                    <h6>q</h6>
-                    <p class="blog-text">
-                        Ha egy listázásnál például megállt a feldolgozás, mert vár egy parancsra.
-                    </p>
-                </div>
-            </div>                               
-        </section>
-        <section class="container rounded">
-            <div class="row pt-2 yellow-line-bg">
-                <div class="col-12 text-left">
-                    <h4>Git parancssori fájlkezelés</h4>
-                    <div class="dropdown-divider"></div>
-                    <h6>pwd</h6>
-                    <p class="blog-text">
-                        Megmutatja jelenleg melyik könyvtárban vagyunk.
-                    </p>
-                    <h6>cd ~</h6>
-                    <p class="blog-text">
-                        A home (default) könyvtárba ugrik vissza.
-                    </p>
-                    <h6>cd ..</h6>
-                    <p class="blog-text">
-                        Egy mappával visszalép.
-                    </p>
-                    <h6>ls</h6>
-                    <h6>ls -la</h6>
-                    <p class="blog-text">
-                        A mappa tartalmát mutatja meg. Az -la kapcsoló a rejtett fájlokat is listázza.
-                    </p>
-                </div>
-            </div>                               
-        </section>
-        <section class="container rounded">
-            <div class="row pt-2 yellow-line-bg">
-                <div class="col-12 text-left">
-                    <h4>Git verziókezelés 1.</h4>
-                    <div class="dropdown-divider"></div>
-                    <h6>git init</h6>
-                    <p class="blog-text">
-                        Az adott mappát verziókezelés alá vonja.
-                    </p>
-                    <h6>git add .</h6>
-                    <p class="blog-text">
-                        A mappa jelenlegi változtatásait "stage" állapotba rakja (a working copy-ból).
-                    </p>
-                    <h6>git commit -m "message"</h6>
-                    <h6>git commit -am "message"</h6>
-                    <p class="blog-text">
-                        A stage-ben lévő változtatásokat feltölti a repository-ban.
-                        Az "-am" kapcsolóval kihagyja a stage fázist, a working copy-ból közvetlenül tölti fel a repository-t.
-                    </p>
-                    <h6>git log</h6>
-                    <h6>git log --author="dzsos"</h6>
-                    <p class="blog-text">
-                        Megmutatja az eddig commit-álásokat (ha kell szerző szerint).
-                    </p>
-                    <h6>git blame x.txt</h6>
-                    <p class="blog-text">
-                        Megmutatja kik hogyan módosították eddig a megadott fájlt.
-                    </p>
-                    <h6>git status</h6>
-                    <p class="blog-text">
-                        Megmutatja milyen változások nincsenek még a repository-ban (working copy/stage fázis).
-                    </p>
-                    <h6>git diff</h6>
-                    <h6>git diff --staged</h6>
-                    <p class="blog-text">
-                        Alapból a working copy, repository különbségeket mutatja meg, a --staged kapcsolóval
-                        meg a stage, repository különbségeket.
-                    </p>
-                    <h6>git rm x.txt</h6>
-                    <p class="blog-text">
-                        Törli az x.txt fájlt.
-                    </p>
-                    <h6>git mv x.txt folder/y.txt</h6>
-                    <p class="blog-text">
-                        Átnevezi és/vagy áthelyezi a fájlt.
-                    </p>
-                </div>
-            </div>                               
-        </section>
-        <section class="container rounded">
-            <div class="row pt-2 yellow-line-bg">
-                <div class="col-12 text-left">
-                    <h4>Git verziókezelés 2.</h4>
-                    <div class="dropdown-divider"></div>
-                    <h6>git checkout -- x.txt</h6>
-                    <h6>git checkout c7d5f -- x.txt</h6>
-                    <p class="blog-text">
-                        A repository-ból állítja vissza az x.txt fájlt, felülírja, ha éppen dolgoztunk rajta.
-                        A c7d5f azonosítójú commit-ra állítja vissza az x.txt fájlt.
-                    </p>
-                    <h6>git reset HEAD x.txt</h6>
-                    <p class="blog-text">
-                        A stage fázisból állítja vissza a változtatást a working copy-ba (unstaged).
-                    </p>
-                    <h6>git clone https://github.com/USERNAME/REPONAME repo</h6>
-                    <p class="blog-text">
-                        A githubról leszed egy adott repository-t, aminek készít egy mappát a megadott repo névvel.
-                    </p>
-                    <h6>git remote add repo https://github.com/USERNAME/REPONAME</h6>
-                    <p class="blog-text">
-                        Csatlakozik egy github-os repository-hoz, később ezt repo néven érjük el.
-                    </p>
-                    <h6>git push -u repo master</h6>
-                    <p class="blog-text">
-                        Minden commitált módosítást (-u) feltölt a megadott github-os repository master branch-ére.
-                    </p>
-                    <h6>git pull repo master</h6>
-                    <p class="blog-text">
-                        A repo rövidítésű központi adatbázis master branch-ével frissíti a saját könyvtárunkat (ha kell).
-                    </p>
-                    <h6>git branch trial</h6>
-                    <p class="blog-text">
-                        Létrehoz egy új branch-et, ahol egy külön ágon fejleszthetünk.
-                    </p>
-                    <h6>git checkout trial</h6>
-                    <p class="blog-text">
-                        Átvált a megadott branchre, innentől kezdve ezen dolgozunk.
-                    </p>
-                    <h6>git branch</h6>
-                    <p class="blog-text">
-                        Megmutatja melyik az aktív branch jelenleg.
-                    </p>
-                    <h6>git diff master..trial</h6>
-                    <p class="blog-text">
-                        Megmutatja a különbségeket a megadott két branch között.
-                    </p>
-                    <h6>git merge trial</h6>
-                    <p class="blog-text">
-                        Merge-öli a trial branch-et az aktív branch-re (tehát előtte checkout arra a 
-                        branch-re amelyikre merge-ölni akarunk).
-                    </p>
-                    <h6>git branch -d trial</h6>
-                    <h6>git branch -D trial</h6>
-                    <p class="blog-text">
-                        A trial branch törlésének módjai, a -D kapcsolóval nyomtalanul töröljük 
-                        (ha nem sikerült az azon lévő fejlesztés, és már nincs szükség rá).
-                    </p>
+                        A CRUD egy elterjedt mozaikszó szoftver- és webfejlesztési területen. Create - Létrehozás, Read - visszaolvasás, 
+                        Update - módosítás, Delete - törlés. A model szerint egy alkalmazásnak amelyik 
+                        adatbázist használ legalább ezt a négy alapfunkciót kell sikeresen elvégeznie, hogy késznek minősítsék.
+                     </p>                    
+                
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn orange-line-bg ml-3" data-toggle="modal" data-target="#Crud1">
+                        Create
+                    </button>
+                    <button type="button" class="btn orange-line-bg ml-3" data-toggle="modal" data-target="#Crud2">
+                        Read
+                    </button>
+                    <button type="button" class="btn orange-line-bg ml-3" data-toggle="modal" data-target="#Crud3">
+                        Update
+                    </button>
+                    <button type="button" class="btn orange-line-bg ml-3" data-toggle="modal" data-target="#Crud4">
+                        Delete
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="Crud1" tabindex="-1" role="dialog" aria-labelledby="Crud1Title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="Crud1Title">Create</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="blog-text">
+                                        Ez a funkció arról szól, hogy az alkalmazásnak képesnek kell lennie a működésre a megadott, bevitt adatokkal,
+                                        és megfelelően, hibák nélkül kell reagálnia azokra. Itt történik az adatbázis feltöltése, rekordok készítése.
+                                        Tesztelés során ebben a részben töltjük fel az adatbázist különféle tesztadatokkal.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="Crud2" tabindex="-1" role="dialog" aria-labelledby="Crud2Title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="Crud2Title">Read</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="blog-text">
+                                        Ez a funkció arról szól, hogy az alkalmazásnak képesnek kell lennie a korábban megadott adatok
+                                        eltárolására és módosítás nélküli visszaadására a különféle lekérdezéseknél. Tesztelés során ebben a 
+                                        részben ellenőrizzük a korábban bevitt adatokat (mentés, submit, folyamat továbblépés után).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="Crud3" tabindex="-1" role="dialog" aria-labelledby="Crud3Title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="Crud3Title">Update</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="blog-text">
+                                        Ez a funkció arról szól, hogy az alkalmazásnak képesnek kell lennie arra, hogy az eltárolt adatokat kérésre megfelelően 
+                                        módosítsa/felülírja. Tehát ha egy rekordot módosítunk, akkor azt végig kell vezetni az adatbázison, és minden érintett helyen 
+                                        módosítani. Tesztelés során ekkor a korábban bevitt adatokat módosítjuk (utána jöhet ismét a Read fázis).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="Crud4" tabindex="-1" role="dialog" aria-labelledby="Crud4Title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="Crud4Title">Delete</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="blog-text">
+                                        Ez a funkció arról szól, hogy az alkalmazásnak képesnek kell lennie megfelelően lekezelni az adat törléseket.
+                                        Ekkor a törölt adat minden kapcsolatát újra ki kell értékelnie, és a szükséges módosításokat, törléseket megtennie.
+                                        Teszteléskor adat törlés után ellenőrizzük, hogy helyesen követte-e le a rendszer a törlést.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>                               
         </section>
